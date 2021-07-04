@@ -16,15 +16,28 @@ const robotManipulator = new RobotManipulator(
   "inverse"
 );
 
+const inverseText = document.querySelector(".inverse");
+const mode = document.querySelector(".mode");
+
 window.addEventListener("keydown", keydown);
 
 function keydown(event) {
   switch (event.key) {
     case "q":
-      robotManipulator.toggleMode();
+      if (robotManipulator.mode === "inverse") {
+        robotManipulator.setMode("forward");
+        inverseText.style.visibility = "hidden";
+        mode.textContent = "Forward Control";
+      } else {
+        robotManipulator.setMode("inverse");
+        inverseText.style.visibility = "visible";
+        mode.textContent = "Inverse Control";
+      }
+    case "w":
+      robotManipulator.toggleControlMode();
       break;
-    case "t":
-      console.log(robotManipulator.camera.aspect);
+    case "r":
+      robotManipulator.resetRobot();
       break;
   }
 }

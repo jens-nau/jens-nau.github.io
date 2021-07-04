@@ -113,12 +113,10 @@ class RobotManipulator extends RobotLoader {
     this.clock = new Clock();
     this.clock.start();
 
-    this.worldControlsBasePosition = new Vector3(-30, -30, -100);
+    this.worldControlsBasePosition = new Vector3(-30, -25, -100);
     this.worldControlsBasePosition.x =
       this.worldControlsBasePosition.y * this.camera.aspect;
-    this.worldControlsPositionMemory = new Vector3(
-      ...Object.values(this.worldControlsBasePosition)
-    );
+    this.worldControlsPositionMemory = new Vector3(0, 0, 0);
 
     const worldControls = new TransformControls(this.camera, this.canvas);
     worldControls.setSize(0.5);
@@ -310,6 +308,10 @@ class RobotManipulator extends RobotLoader {
     this.camera.updateProjectionMatrix();
     this.worldControlsBasePosition.x =
       this.worldControlsBasePosition.y * this.camera.aspect;
+    this.worldControlsBase.position.set(
+      ...Object.values(this.worldControlsBasePosition)
+    );
+    this.worldControlsPositionMemory = new Vector3(0, 0, 0);
   }
 
   setSolverOptions(solverOptions) {
@@ -332,6 +334,7 @@ class RobotManipulator extends RobotLoader {
         this._updateInverseControls();
         this.scene.add(this.transformControls);
         this.scene.add(this.worldControls);
+        this._resetEmission();
         this.mode = mode;
         break;
       case "view":
