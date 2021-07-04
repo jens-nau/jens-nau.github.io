@@ -1,0 +1,103 @@
+{
+    "Header": {
+        "Date": "25.08.2020",
+        "Author": "Paul Maroldt"
+    },
+
+    "type": "RevoluteJoint",
+    "ID": 1,
+    "name": "D86",
+    "cplx": 0,
+
+    "kinematics": {
+        "pl_Transformation": [
+            [  0,  0,  1,  0],
+            [  1,  0,  0,  0],
+            [  0,  1,  0,  0.064],
+            [  0,  0,  0,  1]
+        ],
+
+        "dl_Transformation": [
+            [  0, -1,  0,  0],
+            [  1,  0,  0,  0],
+            [  0,  0,  1,  0.0555],
+            [  0,  0,  0,  1]
+        ]
+    },
+
+    "dynamics": {
+        "pl_Mass": 1.78,
+        "pl_Inertia": [
+            [ 7.58e-3,  1.89e-5, -7.45e-5],
+            [ 1.89e-5,  8.14e-3, -1.64e-5],
+            [-7.45e-5, -1.64e-5,  2.15e-3]
+        ],
+        "pl_r_com": [6.2e-4, 1.8e-4, 5.82e-2],
+
+        "dl_Mass": 0.282,
+        "dl_Inertia": [
+            [ 2.87e-4,  0,       -5.10e-8],
+            [ 0      ,  2.87e-4, -8.90e-8],
+            [-5.10e-8, -8.90e-8,  1.22e-4]
+        ],
+        "dl_r_com": [0, 0, -2.25e-2],
+
+        "motor_Intertia": 4.76e-5,
+        "friction_coulomb": 4.04,
+        "friction_viscous": 2.07
+    },
+
+    "limits": {
+        "q_upper": 4.7124,
+        "q_lower": -4.7124,
+        "rated_torque": 23.1,
+        "peak_torque": 60,
+        "rated_current": 7.8,
+        "peak_current": 24.9,
+        "velocity": 7.56 
+    },
+
+    "connectors": {
+        "pl_size": 80,
+        "pl_type": "clamp",
+        "dl_size": 80,
+        "dl_type": "clamp"
+    },
+
+    "collisions": {
+        "pl_obj": {
+            "Type":"Mesh",
+            "file":"D86.stl",
+            "approx":"D86_convexDecompose.wrl"
+        },
+        "dl_obj": {"Type":"Cylinder","r":0.03,"h":-0.007}
+    },
+
+    "components": {
+        "motor": {
+            "name": "ILMe50x14",
+            "torque_constant": 0.054,
+            "rated_current": 7.8,
+            "peak_current": 24.9,
+            "rated_torque": 0.42,
+            "peak_torque": 1.34
+        },
+        "gears": {
+            "name": "SHG-17-100-2SH-SP",
+            "ratio": 101,
+            "elasticity": null
+        },
+        "encoder_motor": {
+            "name": "Circulo_700_A2_rev2",
+            "resolution": 524288
+        },
+        "encoder_link": {
+            "name": "Circulo_700_A2_rev2",
+            "resolution": 524288
+        },
+        "controller": {
+            "name": "Circulo_700_A2_rev2",
+            "peak_torque": 0
+        }
+    }
+}

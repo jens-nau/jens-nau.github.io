@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<robot name="modular-robot">
+	<link name="part0">
+		<visual>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/B-86/B-86.stl"/>
+			</geometry>
+			<material name="color-0">
+				<color rgba="1.000000 1.000000 1.000000 1.000000"/>
+			</material>
+		</visual>
+		<collision>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/B-86/B-86.stl"/>
+			</geometry>
+		</collision>
+	</link>
+	<link name="part2">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 -0.022500"/>
+			<mass value="0.282000"/>
+			<inertia ixx="0.000287" ixy="0.000000" ixz="-0.000000" iyy="0.000287" iyz="-0.000000" izz="0.000122"/>
+		</inertial>
+	</link>
+	<link name="part1">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000620 0.000180 0.058200"/>
+			<mass value="1.780000"/>
+			<inertia ixx="0.007580" ixy="0.000019" ixz="-0.000074" iyy="0.008140" iyz="-0.000016" izz="0.002150"/>
+		</inertial>
+		<visual>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+			<material name="color-1">
+				<color rgba="0.100000 0.100000 0.500000 1.000000"/>
+			</material>
+		</visual>
+		<collision>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+		</collision>
+	</link>
+	<link name="part4">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 -0.022500"/>
+			<mass value="0.282000"/>
+			<inertia ixx="0.000287" ixy="0.000000" ixz="-0.000000" iyy="0.000287" iyz="-0.000000" izz="0.000122"/>
+		</inertial>
+	</link>
+	<link name="part3">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000620 0.000180 0.058200"/>
+			<mass value="1.780000"/>
+			<inertia ixx="0.007580" ixy="0.000019" ixz="-0.000074" iyy="0.008140" iyz="-0.000016" izz="0.002150"/>
+		</inertial>
+		<visual>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+			<material name="color-3">
+				<color rgba="0.100000 0.100000 0.500000 1.000000"/>
+			</material>
+		</visual>
+		<collision>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+		</collision>
+	</link>
+	<link name="part5">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.016508 0.000000 0.034336"/>
+			<mass value="0.418000"/>
+			<inertia ixx="0.001042" ixy="0.000000" ixz="-0.000373" iyy="0.001164" iyz="0.000000" izz="0.000703"/>
+		</inertial>
+		<visual>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<!-- HOTFIX -->
+				<mesh filename="ModuleLibrary/L150-L-80-80/L150-L-80-80.stl"/> 
+			</geometry>
+			<material name="color-5">
+				<color rgba="1.000000 1.000000 1.000000 1.000000"/>
+			</material>
+		</visual>
+		<collision>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<!-- HOTFIX -->
+				<mesh filename="ModuleLibrary/L150-L-80-80/L150-L-80-80.stl"/>
+			</geometry>
+		</collision>
+	</link>
+	<link name="part7">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 -0.022500"/>
+			<mass value="0.282000"/>
+			<inertia ixx="0.000287" ixy="0.000000" ixz="-0.000000" iyy="0.000287" iyz="-0.000000" izz="0.000122"/>
+		</inertial>
+	</link>
+	<link name="part6">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000620 0.000180 0.058200"/>
+			<mass value="1.780000"/>
+			<inertia ixx="0.007580" ixy="0.000019" ixz="-0.000074" iyy="0.008140" iyz="-0.000016" izz="0.002150"/>
+		</inertial>
+		<visual>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+			<material name="color-6">
+				<color rgba="0.100000 0.100000 0.500000 1.000000"/>
+			</material>
+		</visual>
+		<collision>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+		</collision>
+	</link>
+	<link name="tool_dummy">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000620 0.000180 0.058200"/>
+			<mass value="0.000000"/>
+			<inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000000" iyz="0.000000" izz="0.000000"/>
+		</inertial>
+	</link>
+	<link name="part9">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 -0.022500"/>
+			<mass value="0.282000"/>
+			<inertia ixx="0.000287" ixy="0.000000" ixz="-0.000000" iyy="0.000287" iyz="-0.000000" izz="0.000122"/>
+		</inertial>
+	</link>
+	<link name="part8">
+		<inertial>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000620 0.000180 0.058200"/>
+			<mass value="1.780000"/>
+			<inertia ixx="0.007580" ixy="0.000019" ixz="-0.000074" iyy="0.008140" iyz="-0.000016" izz="0.002150"/>
+		</inertial>
+		<visual>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+			<material name="color-8">
+				<color rgba="0.100000 0.100000 0.500000 1.000000"/>
+			</material>
+		</visual>
+		<collision>
+			<origin rpy="0.000000 0.000000 0.000000" xyz="0.000000 0.000000 0.000000"/>
+			<geometry>
+				<mesh filename="ModuleLibrary/D86/D86.stl"/>
+			</geometry>
+		</collision>
+	</link>
+	<joint name="part0_part1" type="fixed">
+		<origin xyz="0.000000 0.000000 0.070000" rpy="0.000000 -0.000000 0.000000"/>
+		<parent link="part0"/>
+		<child link="part1"/>
+		<axis xyz="0.000000 0.000000 0.000000"/>
+	</joint>
+	<joint name="part2_part3" type="fixed">
+		<origin xyz="0.000000 0.000000 0.055500" rpy="0.000000 -0.000000 1.570796"/>
+		<parent link="part2"/>
+		<child link="part3"/>
+		<axis xyz="0.000000 0.000000 0.000000"/>
+	</joint>
+	<joint name="joint0" type="revolute">
+		<origin xyz="0.000000 0.000000 0.064000" rpy="1.570796 -0.000000 1.570796"/>
+		<parent link="part1"/>
+		<child link="part2"/>
+		<axis xyz="0.000000 0.000000 1.000000"/>
+		<limit effort="3.141593" velocity="7.560000" lower="-4.712400" upper="4.712400"/>
+	</joint>
+	<joint name="part4_part5" type="fixed">
+		<origin xyz="0.000000 0.000000 0.055500" rpy="0.000000 -0.000000 1.570796"/>
+		<parent link="part4"/>
+		<child link="part5"/>
+		<axis xyz="0.000000 0.000000 0.000000"/>
+	</joint>
+	<joint name="joint1" type="revolute">
+		<origin xyz="0.000000 0.000000 0.064000" rpy="1.570796 -0.000000 1.570796"/>
+		<parent link="part3"/>
+		<child link="part4"/>
+		<axis xyz="0.000000 0.000000 1.000000"/>
+		<limit effort="3.141593" velocity="7.560000" lower="-4.712400" upper="4.712400"/>
+	</joint>
+	<joint name="part5_part6" type="fixed">
+		<origin xyz="0.054700 0.000000 0.053000" rpy="3.141593 -1.570796 0.000000"/>
+		<parent link="part5"/>
+		<child link="part6"/>
+		<axis xyz="0.000000 0.000000 0.000000"/>
+	</joint>
+	<joint name="part7_part8" type="fixed">
+		<origin xyz="0.000000 0.000000 0.055500" rpy="0.000000 -0.000000 1.570796"/>
+		<parent link="part7"/>
+		<child link="part8"/>
+		<axis xyz="0.000000 0.000000 0.000000"/>
+	</joint>
+	<joint name="joint2" type="revolute">
+		<origin xyz="0.000000 0.000000 0.064000" rpy="1.570796 -0.000000 1.570796"/>
+		<parent link="part6"/>
+		<child link="part7"/>
+		<axis xyz="0.000000 0.000000 1.000000"/>
+		<limit effort="3.141593" velocity="7.560000" lower="-4.712400" upper="4.712400"/>
+	</joint>
+	<joint name="part9_tool_dummy" type="fixed">
+		<origin xyz="0.000000 0.000000 0.055500" rpy="0.000000 -0.000000 1.570796"/>
+		<parent link="part9"/>
+		<child link="tool_dummy"/>
+		<axis xyz="0.000000 0.000000 0.000000"/>
+	</joint>
+	<joint name="joint3" type="revolute">
+		<origin xyz="0.000000 0.000000 0.064000" rpy="1.570796 -0.000000 1.570796"/>
+		<parent link="part8"/>
+		<child link="part9"/>
+		<axis xyz="0.000000 0.000000 1.000000"/>
+		<limit effort="3.141593" velocity="7.560000" lower="-4.712400" upper="4.712400"/>
+	</joint>
+</robot>
+

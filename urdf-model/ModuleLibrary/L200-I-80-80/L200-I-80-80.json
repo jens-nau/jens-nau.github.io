@@ -1,0 +1,47 @@
+{
+    "Header": {
+        "Date": "25.08.2020",
+        "Author": "Paul Maroldt"
+    },
+
+    "type": "Strut",
+    "ID": 6,
+    "name": "L200-I-80-80",
+    "cplx": 1,
+
+    "kinematics": {
+        "pl_Transformation": [
+            [  1,  0,  0,  0],
+            [  0,  1,  0,  0],
+            [  0,  0,  1,  0.200],
+            [  0,  0,  0,  1]
+        ]
+    },
+
+    "dynamics": {
+        "pl_Mass": 0.7431523,
+        "pl_Inertia": [
+            [ 0.0116057,  0, 0],
+            [ 0,  0.0116056, 0],
+            [ 0, 0,  0.0007058]
+        ],
+        "pl_r_com": [0.0000138, -0.0000137, 0.1009593],
+
+        "elasticityvector": null
+    },
+
+    "connectors": {
+        "pl_size": 80,
+        "pl_type": "clamp",
+        "dl_size": 80,
+        "dl_type": "clamp"
+    },
+
+    "collisions": {
+        "pl_obj": {
+            "Type":"Mesh",
+            "file":"L200-I-80-80.stl",
+            "approx":"L200-I-80-80_convdec.wrl"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "Header": {
+        "Date": "04.11.2020",
+        "Author": "Paul Maroldt"
+    },
+
+    "type": "Base",
+    "ID": 106,
+    "name": "B-116-90deg",
+    "cplx": 1,
+
+    "kinematics": {
+        "pl_Transformation": [
+            [  0,  0, -1,  -0.07],
+            [  0,  1,  0,  0],
+            [  1,  0,  0,  0],
+            [  0,  0,  0,  1]
+        ]
+    },
+
+    "dynamics": {
+        "pl_Mass": 0,
+        "pl_Inertia": [
+            [ 0,  0, 0],
+            [ 0,  0, 0],
+            [ 0, 0,  0]
+        ],
+        "pl_r_com": [0, 0, 0],
+
+        "elasticityvector": null
+    },
+
+    "connectors": {
+        "dl_size": 110,
+        "dl_type": "clamp"
+    },
+
+    "collisions": {
+        "pl_obj": {
+            "Type":"Mesh",
+            "file":"B-116-90deg.stl",
+            "approx":"B-116-90deg_convdec.wrl"
+        }
+    }
+}

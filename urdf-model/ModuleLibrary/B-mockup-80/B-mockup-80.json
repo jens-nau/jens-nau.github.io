@@ -1,0 +1,42 @@
+{
+    "Header": {
+        "Date": "02.09.2020",
+        "Author": "Paul Maroldt"
+    },
+
+    "type": "Base",
+    "ID": 100,
+    "name": "B-mockup-80",
+    "cplx": 1,
+
+    "kinematics": {
+        "pl_Transformation": [
+            [  0,  0, -1,  0],
+            [  0,  1,  0,  0],
+            [  1,  0,  0,  0],
+            [  0,  0,  0,  1]
+        ]
+    },
+
+    "dynamics": {
+        "pl_Mass": 0,
+        "pl_Inertia": [
+            [ 0,  0, 0],
+            [ 0,  0, 0],
+            [ 0, 0,  0]
+        ],
+        "pl_r_com": [0, 0, 0],
+
+        "elasticityvector": null
+    },
+
+    "connectors": {
+        "dl_size": 80,
+        "dl_type": "clamp"
+    },
+
+    "collisions": {
+        "pl_obj": {
+        }
+    }
+}

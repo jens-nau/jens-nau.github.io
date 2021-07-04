@@ -1,0 +1,47 @@
+{
+    "Header": {
+        "Date": "30.11.2020",
+        "Author": "Paul Maroldt"
+    },
+
+    "type": "Strut",
+    "ID": 24,
+    "name": "L1000-L-110-110",
+    "cplx": 1,
+
+    "kinematics": {
+        "pl_Transformation": [
+            [  0,  0,  1,  1.000],
+            [  0,  1,  0,  0],
+            [ -1,  0,  0,  0.053],
+            [  0,  0,  0,  1]
+        ]
+    },
+
+    "dynamics": {
+        "pl_Mass": 3.3361312 ,
+        "pl_Inertia": [
+            [ 0.0194692,  0, -0.1003186],
+            [ 0,  1.1047236, 0],
+            [-0.1003186, 0,  1.0915451]
+        ],
+        "pl_r_com": [0.4420722, 0, 0.0619906],
+
+        "elasticityvector": null
+    },
+
+    "connectors": {
+        "pl_size": 110,
+        "pl_type": "clamp",
+        "dl_size": 110,
+        "dl_type": "clamp"
+    },
+
+    "collisions": {
+        "pl_obj": {
+            "Type":"Mesh",
+            "file":"L1000-L-110-110.stl",
+            "approx":"L1000-L-110-110_convdec.wrl"
+        }
+    }
+}

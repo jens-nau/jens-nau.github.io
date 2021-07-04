@@ -1,0 +1,47 @@
+{
+    "Header": {
+        "Date": "03.09.2020",
+        "Author": "Paul Maroldt"
+    },
+
+    "type": "Strut",
+    "ID": 17,
+    "name": "L600-L-80-80",
+    "cplx": 1,
+
+    "kinematics": {
+        "pl_Transformation": [
+            [  0,  0,  1,  0.600],
+            [  0,  1,  0,  0],
+            [ -1,  0,  0,  0.053],
+            [  0,  0,  0,  1]
+        ]
+    },
+
+    "dynamics": {
+        "pl_Mass": 1.5531355 ,
+        "pl_Inertia": [
+            [ 0.0054761,  0, -0.0212097],
+            [ 0,  0.1839212, 0],
+            [-0.0212097, 0,  0.1801830]
+        ],
+        "pl_r_com": [0.2575814, 0, 0.0486164],
+
+        "elasticityvector": null
+    },
+
+    "connectors": {
+        "pl_size": 80,
+        "pl_type": "clamp",
+        "dl_size": 80,
+        "dl_type": "clamp"
+    },
+
+    "collisions": {
+        "pl_obj": {
+            "Type":"Mesh",
+            "file":"L600-L-80-80.stl",
+            "approx":"L600-L-80-80_convdec.wrl"
+        }
+    }
+}

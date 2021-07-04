@@ -1,0 +1,47 @@
+{
+    "Header": {
+        "Date": "03.09.2020",
+        "Author": "Paul Maroldt"
+    },
+
+    "type": "Strut",
+    "ID": 18,
+    "name": "L700-L-80-80",
+    "cplx": 1,
+
+    "kinematics": {
+        "pl_Transformation": [
+            [  0,  0,  1,  0.700],
+            [  0,  1,  0,  0],
+            [ -1,  0,  0,  0.053],
+            [  0,  0,  0,  1]
+        ]
+    },
+
+    "dynamics": {
+        "pl_Mass": 1.6920331 ,
+        "pl_Inertia": [
+            [ 0.0060154,  0, -0.0272456],
+            [ 0,  0.2727326, 0],
+            [-0.0272456, 0,  0.2686043]
+        ],
+        "pl_r_com": [0.3037486, 0, 0.0489762],
+
+        "elasticityvector": null
+    },
+
+    "connectors": {
+        "pl_size": 80,
+        "pl_type": "clamp",
+        "dl_size": 80,
+        "dl_type": "clamp"
+    },
+
+    "collisions": {
+        "pl_obj": {
+            "Type":"Mesh",
+            "file":"L700-L-80-80.stl",
+            "approx":"L700-L-80-80_convdec.wrl"
+        }
+    }
+}
