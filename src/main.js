@@ -91,6 +91,8 @@ function keydown(event) {
     case "r":
       if (!rClicked) {
         rClicked = true;
+        sceneLoader.scene.remove(cube);
+        createRandomCube();
         robotManipulator.resetRobot();
       }
       break;
