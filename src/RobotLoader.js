@@ -3,9 +3,12 @@
 import {
   LoadingManager,
   MeshPhysicalMaterial,
+  Group,
   Vector3,
   Quaternion,
   Euler,
+  Box3,
+  Box3Helper,
 } from "three";
 import { PointerURDFDragControls } from "urdf-loader/src/URDFDragControls.js";
 import URDFLoader from "urdf-loader";
@@ -36,6 +39,11 @@ class RobotLoader {
 
     this.colors = {};
     this.materials = {};
+    this.showBBoxes = false;
+    this.bboxGroup = new Group(); // TODO
+    if (this.showBBoxes) {
+      this.scene.add(this.bboxGroup); // TODO
+    }
 
     const defaultOffset = new Vector3(0, 0, 0);
 
@@ -44,10 +52,11 @@ class RobotLoader {
 
     this.ignoreLimits = ignoreLimits ?? true;
 
+    // TODO
     const defaultMaterial = new MeshPhysicalMaterial({
-      color: 0x404040,
+      color: 0x848789,
       roughness: 0.5,
-      metalness: 0.5,
+      metalness: 0.25,
     });
 
     this.material = material ?? defaultMaterial;
@@ -62,7 +71,7 @@ class RobotLoader {
 
     this.manager.onLoad = () => {
       this._onLoaded();
-      init && init();
+      init && init.bind(this)(); // TODO
     };
   }
 
@@ -87,6 +96,11 @@ class RobotLoader {
     this.loaded = true;
     this._loadMaterials();
     this._loadForwardControls();
+  }
+
+  _render() {
+    this.animationRequest = requestAnimationFrame(this._render.bind(this));
+    this._updateBoundingBoxes();
   }
 
   _loadForwardControls() {
@@ -119,6 +133,25 @@ class RobotLoader {
         }
       }
     };
+  }
+
+  // TODO
+  _updateBoundingBoxes() {
+    this.bboxGroup.remove(...this.bboxGroup.children);
+    this.robot.traverse((object) => {
+      if (object.type === "URDFLink") {
+        object.children.forEach((child) => {
+          if (child.type === "URDFVisual") {
+            const box = new Box3();
+            box.setFromObject(child.children[0]);
+            box.name = object.name;
+            const bbox = new Box3Helper(box, 0xffff00);
+            bbox.name = object.name;
+            this.bboxGroup.add(bbox);
+          }
+        });
+      }
+    });
   }
 
   _loadMaterials() {

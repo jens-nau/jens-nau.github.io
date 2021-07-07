@@ -81,7 +81,7 @@ class RobotManipulator extends RobotLoader {
   }
 
   _render() {
-    this.animationRequest = requestAnimationFrame(this._render.bind(this));
+    super._render();
     if (this.mode === "inverse" && this.solve) {
       this._solveInverseControls();
     }
@@ -193,7 +193,7 @@ class RobotManipulator extends RobotLoader {
         const update = this.worldControlsPositionMemory.clone();
         update.applyQuaternion(this.camera.quaternion);
         for (const key of Object.keys(position)) {
-          position[key] = position[key] + update[key] / 500;
+          position[key] = position[key] + update[key] / 2500; // TODO
         }
         this.setEndeffector(undefined, position);
       }

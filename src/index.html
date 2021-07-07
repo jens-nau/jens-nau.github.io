@@ -17,7 +17,6 @@
         height: 100%;
         margin: 0;
         font-family: "Karla";
-        overflow: hidden;
       }
       div {
         margin: 0;
@@ -70,6 +69,7 @@
       }
       .mode {
         font-size: x-large;
+        color: red;
       }
     </style>
     <div class="header">
@@ -79,13 +79,13 @@
       <p class="content">
         Hi and thank you for participating in my user experience survey. Your
         task is pretty straightforward: Check out the robot visualization below
-        and simply try to move the robot. Hopefully the app is intuitive enough
-        for you to figure out the controls yourself. Please also test the
-        different control modes, you can change them by pressing the Q key on
-        your keyboard. When you are done testing, I invite you to shortly fill
-        out my survey. The survey consists of 5 closed questions and should not
-        take more than 1 minute. Thanks again for your participation and all the
-        best.
+        and simply try to move the endeffector (the red part) of the robot into
+        the green cube. Hopefully the app is intuitive enough for you to figure
+        out the controls yourself. Please also test the different control modes,
+        you can change them by pressing the Q key on your keyboard. When you are
+        done testing, I invite you to shortly fill out my survey. The survey
+        consists of 5 closed questions and should not take more than 1 minute.
+        Thanks again for your participation and all the best.
       </p>
     </div>
     <div class="box">
@@ -104,6 +104,9 @@
         <h1 class="title">Current Mode</h1>
         <p class="mode title">Inverse Control</p>
         <h1 class="title">Controls</h1>
+        <p><b>Left click</b> on the robot to move the robot.</p>
+        <p><b>Left click</b> on the background to move the camera.</p>
+        <p><b>Scroll</b> to zoom.</p>
         <p>Press <b>Q</b> to switch between forward and inverse control.</p>
         <p>Press <b>R</b> to reset the robot if you are stuck.</p>
         <p class="inverse">
