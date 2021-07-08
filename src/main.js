@@ -7,6 +7,7 @@ import { BoxGeometry, MeshBasicMaterial, Mesh, Box3 } from "three";
 const canvas = document.querySelector("canvas.webgl");
 
 let [qClicked, wClicked, rClicked] = [false, false, false];
+let counter = 0;
 
 const init = function () {
   this.colors["part18"].setHex(0xff0000);
@@ -33,6 +34,7 @@ let cube;
 
 const inverseText = document.querySelector(".inverse");
 const mode = document.querySelector(".mode");
+const task = document.querySelector(".task");
 
 window.addEventListener("keydown", keydown);
 window.addEventListener("keyup", keyup);
@@ -48,7 +50,21 @@ function render() {
     if (box.intersectsBox(robotManipulator.bboxGroup.children[12].box)) {
       sceneLoader.scene.remove(cube);
       createRandomCube();
+      counter++;
     }
+  }
+  if (counter === 1) {
+    task.textContent = "Good job! Now try it again!";
+  } else if (counter === 2) {
+    task.textContent = "Now we switched to forward control. Try it again!";
+    robotManipulator.setMode("forward");
+    inverseText.style.visibility = "hidden";
+    mode.textContent = "Forward Control";
+  } else if (counter === 3) {
+    task.textContent = "Good job! Now try it again!";
+  } else if (counter === 4) {
+    task.textContent =
+      "Great job! You're done! Click the green button to get to the survey!";
   }
 }
 
